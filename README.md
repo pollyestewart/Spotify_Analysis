@@ -34,10 +34,6 @@ Most of the more complex code is hidden in functions within the .py scripts. A b
 - LastFM account
     - You pull your spotify data through LastFM. It only starts gathering your Spotify data once you have signed up.
 
-# Run through terminal 
-1. Clone the repo locally
-2. Within the cloned folder execute `python PlayGame`
-3. Enjoy the game!     
 
 
  
