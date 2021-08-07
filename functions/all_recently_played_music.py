@@ -1,7 +1,8 @@
 from mutagen.id3 import TCON
 import pylast
 import pandas as pd
-import spotipy
+import spotipy as sp
+import numpy as np
 from spotipy.oauth2 import SpotifyClientCredentials
 
 
@@ -16,7 +17,7 @@ def get_all_recent_tracks(user, network, limit_value = 15):
         track_list.append(track.track.title)
         track_list.append(track.album)
         track_list.append(track.timestamp)
-        #track_list.append(track.track.get_duration())
+        track_list.append(track.track.get_duration())
         track_list.append(track.track.get_listener_count())
         track_list.append(track.track.get_playcount())
         recent_tracks_list.append(track_list)

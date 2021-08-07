@@ -1,6 +1,7 @@
 
 import pandas as pd, numpy as np, matplotlib.pyplot as plt, logging as lg
 import time, requests, re, json, os.path, datetime as dt
+import spotipy as sp
 from geopy.distance import great_circle
 #from mpl_toolkits.basemap import Basemap
 # create a logger to capture progress
