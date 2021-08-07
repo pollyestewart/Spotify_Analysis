@@ -35,7 +35,7 @@ if not getattr(log, 'handler_set', None):
 artist_name_url = 'https://musicbrainz.org/ws/2/artist/?query=artist:{}&fmt=json'
 artist_id_url = 'https://musicbrainz.org/ws/2/artist/{}?fmt=json'
 area_id_url = 'https://musicbrainz.org/ws/2/area/{}?inc=area-rels&fmt=json'
-headers = {'User-Agent':'pollystewart'}
+headers = {'User-Agent':'xxx'}
 
 # configure local caching
 area_cache_filename = 'place_data/area_cache.js'
@@ -47,7 +47,7 @@ area_cache = json.load(open(area_cache_filename)) if os.path.isfile(area_cache_f
 artist_cache = json.load(open(artist_cache_filename)) if os.path.isfile(artist_cache_filename) else {}
 
 
-def make_request(url, headers= {'User-Agent':'pollystewart'}, attempt_count=1):
+def make_request(url, headers= {'User-Agent':'xxx'}, attempt_count=1):
 
     global pause_standard
 
@@ -81,7 +81,7 @@ def make_request(url, headers= {'User-Agent':'pollystewart'}, attempt_count=1):
 
 
 # query the musicbrainz api for an artist's name and return the resulting id
-def get_artist_id_by_name(name, headers= {'User-Agent':'pollystewart'}):
+def get_artist_id_by_name(name, headers= {'User-Agent':'xxx'}):
     response = make_request(artist_name_url.format(name))
     try:
         if response is not None:
